@@ -1,0 +1,133 @@
+.header {
+  margin-bottom: var(--space-8);
+}
+
+.layout {
+  display: flex;
+  gap: var(--space-8);
+  position: relative;
+}
+
+.sidebar {
+  width: 250px;
+  flex-shrink: 0;
+}
+
+.filterGroup {
+  margin-bottom: var(--space-6);
+  padding-bottom: var(--space-6);
+  border-bottom: 1px solid var(--border-color);
+}
+
+.filterLabel {
+  font-weight: 600;
+  margin-bottom: var(--space-4);
+  font-size: 1.125rem;
+}
+
+.radioLabel {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  cursor: pointer;
+  color: var(--text-secondary);
+  font-size: 0.875rem;
+}
+
+.radioLabel input {
+  accent-color: var(--primary-color);
+}
+
+.select {
+  width: 100%;
+  padding: var(--space-2) var(--space-3);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-md);
+  background-color: var(--surface-color);
+  color: var(--text-primary);
+}
+
+.main {
+  flex-grow: 1;
+}
+
+.searchBar {
+  display: flex;
+  gap: var(--space-4);
+  margin-bottom: var(--space-6);
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-6);
+  margin-bottom: var(--space-8);
+}
+
+.pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: var(--space-6);
+  margin-top: var(--space-8);
+  padding-top: var(--space-8);
+  border-top: 1px solid var(--border-color);
+}
+
+.mobileFilterBtn {
+  display: none;
+  background-color: var(--surface-color);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-md);
+  padding: 0 var(--space-4);
+  cursor: pointer;
+}
+
+.closeFilterBtn {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 1.25rem;
+  cursor: pointer;
+  color: var(--text-primary);
+}
+
+@media (max-width: 1024px) {
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .sidebar {
+    position: fixed;
+    top: 0;
+    left: -100%;
+    width: 300px;
+    height: 100vh;
+    background-color: var(--surface-color);
+    z-index: 100;
+    padding: var(--space-6);
+    box-shadow: var(--shadow-lg);
+    transition: left 0.3s ease;
+    overflow-y: auto;
+  }
+
+  .sidebarOpen {
+    left: 0;
+  }
+
+  .closeFilterBtn {
+    display: block;
+  }
+
+  .mobileFilterBtn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .grid {
+    grid-template-columns: 1fr;
+  }
+}
