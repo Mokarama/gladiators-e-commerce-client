@@ -1,0 +1,219 @@
+.hero {
+  min-height: 65vh;
+  display: flex;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+  background: linear-gradient(135deg, rgba(37,99,235,0.1) 0%, rgba(16,185,129,0.1) 100%);
+}
+
+.heroContent {
+  max-width: 600px;
+  position: relative;
+  z-index: 10;
+}
+
+.heroBadge {
+  display: inline-block;
+  padding: var(--space-1) var(--space-3);
+  background-color: rgba(37, 99, 235, 0.1);
+  color: var(--primary-color);
+  border-radius: var(--radius-full);
+  font-size: 0.875rem;
+  font-weight: 600;
+  margin-bottom: var(--space-4);
+}
+
+.heroTitle {
+  font-size: 3.5rem;
+  font-weight: 800;
+  line-height: 1.2;
+  margin-bottom: var(--space-4);
+  color: var(--text-primary);
+}
+
+.heroTitle span {
+  color: var(--primary-color);
+}
+
+.heroSubtitle {
+  font-size: 1.125rem;
+  color: var(--text-secondary);
+  margin-bottom: var(--space-6);
+  line-height: 1.6;
+}
+
+.heroActions {
+  display: flex;
+  gap: var(--space-4);
+}
+
+.heroImageWrapper {
+  position: absolute;
+  right: -5%;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 50%;
+  height: 80%;
+  background: var(--surface-color);
+  border-radius: var(--radius-xl);
+  box-shadow: var(--shadow-lg);
+  overflow: hidden;
+  z-index: 5;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--text-secondary);
+}
+
+/* Section Common */
+.section {
+  padding: var(--space-16) 0;
+}
+
+.sectionAlt {
+  background-color: var(--bg-color);
+  padding: var(--space-16) 0;
+}
+
+.sectionHeader {
+  text-align: center;
+  margin-bottom: var(--space-12);
+}
+
+.sectionTitle {
+  font-size: 2.25rem;
+  font-weight: 700;
+  margin-bottom: var(--space-2);
+  color: var(--text-primary);
+}
+
+.sectionSubtitle {
+  color: var(--text-secondary);
+  font-size: 1rem;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+/* Features */
+.featuresGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-8);
+}
+
+.featureCard {
+  background: var(--surface-color);
+  padding: var(--space-8);
+  border-radius: var(--radius-xl);
+  box-shadow: var(--shadow-sm);
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+
+.featureCard:hover {
+  transform: translateY(-5px);
+}
+
+.featureIcon {
+  width: 64px;
+  height: 64px;
+  border-radius: var(--radius-full);
+  background-color: rgba(37, 99, 235, 0.1);
+  color: var(--primary-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto var(--space-4);
+}
+
+/* Stats */
+.statsGrid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: var(--space-6);
+  text-align: center;
+}
+
+.statNumber {
+  font-size: 2.5rem;
+  font-weight: 800;
+  color: var(--primary-color);
+  margin-bottom: var(--space-2);
+}
+
+.statLabel {
+  color: var(--text-secondary);
+  font-weight: 500;
+}
+
+/* Featured */
+.itemsGrid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: var(--space-6);
+}
+
+/* Newsletter */
+.newsletter {
+  background-color: var(--primary-color);
+  border-radius: var(--radius-xl);
+  padding: var(--space-12);
+  text-align: center;
+  color: white;
+}
+
+.newsletterTitle {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: var(--space-4);
+}
+
+.newsletterForm {
+  display: flex;
+  max-width: 500px;
+  margin: 0 auto;
+  gap: var(--space-2);
+}
+
+.newsletterInput {
+  flex-grow: 1;
+  padding: var(--space-3) var(--space-4);
+  border-radius: var(--radius-md);
+  border: none;
+  font-size: 1rem;
+}
+
+.newsletterBtn {
+  background-color: var(--surface-color);
+  color: var(--primary-color);
+  border: none;
+  padding: 0 var(--space-6);
+  border-radius: var(--radius-md);
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.newsletterBtn:hover {
+  background-color: #f1f5f9;
+}
+
+/* Categories, HowItWorks, Testimonials */
+/* using common grid utilities for these */
+
+@media (max-width: 1024px) {
+  .heroTitle { font-size: 2.5rem; }
+  .heroImageWrapper { display: none; }
+  .featuresGrid { grid-template-columns: repeat(2, 1fr); }
+  .itemsGrid { grid-template-columns: repeat(2, 1fr); }
+  .statsGrid { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (max-width: 640px) {
+  .heroTitle { font-size: 2rem; }
+  .featuresGrid { grid-template-columns: 1fr; }
+  .itemsGrid { grid-template-columns: 1fr; }
+  .statsGrid { grid-template-columns: 1fr; }
+  .newsletterForm { flex-direction: column; }
+}
