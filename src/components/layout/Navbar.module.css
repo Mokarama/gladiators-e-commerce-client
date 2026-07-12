@@ -1,0 +1,124 @@
+.navbar {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  width: 100%;
+  background-color: var(--surface-color);
+  border-bottom: 1px solid var(--border-color);
+  box-shadow: var(--shadow-sm);
+  transition: background-color 0.3s ease;
+}
+
+.navContainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 64px;
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--primary-color);
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+}
+
+.desktopMenu {
+  display: flex;
+  align-items: center;
+  gap: var(--space-6);
+}
+
+.navLink {
+  font-weight: 500;
+  color: var(--text-secondary);
+  transition: color 0.2s ease;
+}
+
+.navLink:hover {
+  color: var(--primary-color);
+}
+
+.navLinkActive {
+  color: var(--primary-color);
+}
+
+.actions {
+  display: flex;
+  align-items: center;
+  gap: var(--space-4);
+}
+
+.mobileMenuBtn {
+  display: none;
+  background: none;
+  border: none;
+  color: var(--text-primary);
+  cursor: pointer;
+  padding: var(--space-1);
+}
+
+.mobileMenu {
+  display: none;
+  flex-direction: column;
+  padding: var(--space-4) 0;
+  border-top: 1px solid var(--border-color);
+}
+
+.mobileMenu.isOpen {
+  display: flex;
+}
+
+.mobileNavLink {
+  padding: var(--space-3) 0;
+  font-weight: 500;
+  color: var(--text-secondary);
+  border-bottom: 1px solid var(--border-color);
+}
+
+/* Dropdown */
+.dropdown {
+  position: relative;
+}
+
+.dropdownMenu {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  width: 200px;
+  background-color: var(--surface-color);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-lg);
+  padding: var(--space-2) 0;
+  margin-top: var(--space-2);
+  display: none;
+  flex-direction: column;
+}
+
+.dropdown:hover .dropdownMenu,
+.dropdown:focus-within .dropdownMenu {
+  display: flex;
+}
+
+.dropdownItem {
+  padding: var(--space-2) var(--space-4);
+  color: var(--text-secondary);
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.dropdownItem:hover {
+  background-color: var(--bg-color);
+  color: var(--primary-color);
+}
+
+@media (max-width: 768px) {
+  .desktopMenu, .actions {
+    display: none;
+  }
+  .mobileMenuBtn {
+    display: block;
+  }
+}
