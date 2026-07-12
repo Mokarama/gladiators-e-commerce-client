@@ -1,0 +1,91 @@
+.hero {
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: center;
+  margin-bottom: var(--space-12);
+}
+
+.heroTitle {
+  font-size: 2.25rem;
+  font-weight: 700;
+  margin-bottom: var(--space-4);
+  color: var(--text-primary);
+}
+
+.heroSubtitle {
+  color: var(--text-secondary);
+  font-size: 1.125rem;
+  line-height: 1.6;
+}
+
+.storySection {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--space-12);
+  margin-bottom: var(--space-16);
+  align-items: center;
+}
+
+.storyImage {
+  width: 100%;
+  border-radius: var(--radius-xl);
+  box-shadow: var(--shadow-md);
+}
+
+.storyTitle {
+  font-size: 1.875rem;
+  font-weight: 700;
+  margin-bottom: var(--space-4);
+}
+
+.storyText {
+  color: var(--text-secondary);
+  margin-bottom: var(--space-4);
+  line-height: 1.6;
+}
+
+.joinSection {
+  background-color: var(--surface-color);
+  padding: var(--space-12);
+  border-radius: var(--radius-xl);
+  text-align: center;
+  border: 1px solid var(--border-color);
+}
+
+.joinTitle {
+  font-size: 1.875rem;
+  font-weight: 700;
+  margin-bottom: var(--space-4);
+}
+
+.joinText {
+  color: var(--text-secondary);
+  max-width: 700px;
+  margin: 0 auto var(--space-6) auto;
+  line-height: 1.6;
+}
+
+.joinBtn {
+  padding: var(--space-3) var(--space-6);
+  background-color: var(--primary-color);
+  color: white;
+  font-weight: 700;
+  border-radius: var(--radius-md);
+  border: none;
+  cursor: pointer;
+  transition: opacity 0.2s ease;
+}
+
+.joinBtn:hover {
+  opacity: 0.9;
+}
+
+@media (max-width: 768px) {
+  .storySection {
+    grid-template-columns: 1fr;
+  }
+  
+  .heroTitle {
+    font-size: 1.875rem;
+  }
+}
