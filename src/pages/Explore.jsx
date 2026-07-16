@@ -30,7 +30,7 @@ export const Explore = () => {
         const pageParam = searchParams.get('page') || 1;
         const sortParam = searchParams.get('sort') || '';
         
-        let url = `http://localhost:5000/api/products?keyword=${keywordParam}&pageNumber=${pageParam}`;
+        let url = `import.meta.env.VITE_API_URL/api/products?keyword=${keywordParam}&pageNumber=${pageParam}`;
         if (categoryParam) url += `&category=${categoryParam}`;
         if (sortParam) url += `&sort=${sortParam}`;
 

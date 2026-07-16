@@ -19,7 +19,7 @@ export const Details = () => {
       setIsLoading(true);
       setError('');
       try {
-        const { data } = await axios.get(`http://localhost:5000/api/products/${id}`);
+        const { data } = await axios.get(`import.meta.env.VITE_API_URL/api/products/${id}`);
         setProduct(data);
       } catch (err) {
         setError(err.response?.data?.message || err.message || 'Product not found');
