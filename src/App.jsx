@@ -1,7 +1,7 @@
 import React, { Suspense, lazy } from 'react';
 import { Routes, Route } from 'react-router-dom';
-import { Layout } from './components/Layout/Layout';
 
+import { Layout } from "./components/Layout/Layout";
 // Code Splitting (Lazy Loading)
 const Home = lazy(() => import('./pages/Home').then(module => ({ default: module.Home })));
 const Explore = lazy(() => import('./pages/Explore').then(module => ({ default: module.Explore })));
