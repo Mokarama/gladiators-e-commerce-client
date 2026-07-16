@@ -1,16 +1,145 @@
-# React
+# 🛒 Gladiators E-Commerce Client
 
-This template provides a minimal setup to get React working in Vite with HMR and some Oxlint rules.
+A modern, responsive, and user-friendly frontend application for the **Gladiators E-Commerce** platform. Built with modern web technologies to deliver a seamless online shopping experience.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## 🚀 Live Demo
 
-## React Compiler
+> Add your deployed frontend URL here
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+```
+https://your-frontend-url.vercel.app
+```
 
-## Expanding the Oxlint configuration
+---
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and Oxlint's TypeScript related rules in your project.
+## 📌 Overview
+
+The Gladiators E-Commerce Client provides an intuitive shopping interface where users can browse products, search and filter items, manage their shopping cart, authenticate securely, and interact with the backend through REST APIs.
+
+This project is fully responsive and optimized for desktop, tablet, and mobile devices.
+
+---
+
+## ✨ Features
+
+- Responsive Modern UI
+- User Authentication
+- JWT Protected Routes
+- Product Listing
+- Product Details
+- Search Products
+- Category Filtering
+- Price Sorting
+- Shopping Cart
+- Checkout Flow
+- Admin Dashboard Support
+- Loading & Error Handling
+- Clean Component Architecture
+
+---
+
+## 🛠️ Tech Stack
+
+- React
+- JavaScript
+- Tailwind CSS
+- DaisyUI
+- Motion
+- React Hook Form
+- Zod
+- Axios
+- Lucide React
+
+---
+
+## 📂 Project Structure
+
+```
+src
+│
+├── app
+├── components
+├── hooks
+├── services
+├── lib
+├── utils
+├── types
+├── assets
+└── styles
+```
+
+---
+
+## ⚙️ Environment Variables
+
+Create a `.env.local` file.
+
+```env
+NEXT_PUBLIC_API_URL=http://localhost:5000
+```
+
+---
+
+## 📦 Installation
+
+Clone the repository
+
+```bash
+git clone https://github.com/Mokarama/gladiators-e-commerce-client.git
+```
+
+Go to the project directory
+
+```bash
+cd gladiators-e-commerce-client
+```
+
+Install dependencies
+
+```bash
+npm install
+```
+
+Run the development server
+
+```bash
+npm run dev
+```
+
+Frontend will run on
+
+```
+http://localhost:3000
+```
+
+---
+
+## 🔗 Backend Repository
+
+Backend Repository
+
+https://github.com/Mokarama/gladiator-e-commerce-server
+
+---
+
+## 🚀 Deployment
+
+Recommended Platform
+
+- Vercel
+
+---
+
+## 👨‍💻 Author
+
+**Mokarama Akter Shanta**
+
+Computer Science & Engineering, RUET
+
+GitHub:
+https://github.com/Mokarama
+
+---
+
